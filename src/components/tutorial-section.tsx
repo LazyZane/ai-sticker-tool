@@ -241,9 +241,14 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   从而产出高质量、高稳定性的结果。这也是<strong className="text-cyan-300">提示词工程 (Prompt Engineering)</strong> 的核心思想。
                 </p>
 
-                <div className="bg-purple-900/20 border border-purple-700/30 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h5 className="font-semibold text-purple-300 text-sm">🤖 完整提示词模板：表情包助手</h5>
+                <div className="bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-pink-900/30 border border-indigo-500/30 rounded-2xl p-6 shadow-xl shadow-indigo-500/10">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg">
+                        <span className="text-white text-sm">🤖</span>
+                      </div>
+                      <h5 className="font-bold text-indigo-200 text-base">完整提示词模板：表情包助手</h5>
+                    </div>
                     <button
                       onClick={() => {
                         const promptText = document.getElementById('complete-prompt-text')?.textContent || '';
@@ -260,13 +265,13 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                         });
                       }}
                       data-copy-button
-                      className="text-xs bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded transition-colors duration-200"
+                      className="text-sm bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-4 py-2 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       📋 复制全文
                     </button>
                   </div>
 
-                  <div className="bg-slate-900/50 rounded p-3 max-h-64 overflow-y-auto">
+                  <div className="bg-slate-900/70 rounded-xl p-4 max-h-64 overflow-y-auto border border-slate-700/50">
                     <pre id="complete-prompt-text" className="text-slate-300 text-xs font-mono whitespace-pre-wrap leading-relaxed">
 {`提示词：表情包助手
 你是一个专业的"表情包制作需求引导与生成助手"。你的核心任务是快速理解用户的基本需求，然后主动为用户设计一套完整的表情包初步方案（包括角色形象、每个表情的画面描述及建议的单段简体中文配文、宣传素材等），并引导用户对这个方案进行"批阅"和反馈，特别是针对每个表情确认"是否有配文"以及（如有）"配文内容是否满意"，并严格遵守微信平台关于宣传素材（尤其是横幅无文字）的规范。最终，根据用户的完全确认结果，生成一份可以直接交付给设计师或AI绘画工具（如Lovart）的、详细且规范的表情包制作需求文档。
@@ -396,8 +401,11 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                     </pre>
                   </div>
 
-                  <div className="mt-3 text-xs text-slate-400">
-                    💡 这是一个完整的表情包制作助手提示词，可以直接复制到任何AI工具中使用。
+                  <div className="mt-4 p-3 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl border border-emerald-500/20">
+                    <p className="text-sm text-emerald-200 flex items-center">
+                      <span className="mr-2">💡</span>
+                      这是一个完整的表情包制作助手提示词，可以直接复制到任何AI工具中使用。
+                    </p>
                   </div>
                 </div>
               </div>
@@ -719,10 +727,10 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
               <button
                 key={step.id}
                 onClick={() => setActiveStep(index)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                className={`flex items-center space-x-2 px-5 py-3 rounded-xl transition-all duration-300 ${
                   activeStep === index
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:text-white dark:bg-slate-800/50 dark:text-slate-300 dark:hover:bg-slate-700/50 dark:hover:text-white bg-white/80 text-gray-700 hover:bg-white hover:text-gray-900 border border-gray-200/50'
+                    ? 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-xl shadow-indigo-500/25 transform scale-105'
+                    : 'bg-slate-800/60 text-slate-300 hover:bg-slate-700/70 hover:text-slate-100 dark:bg-slate-800/60 dark:text-slate-300 dark:hover:bg-slate-700/70 dark:hover:text-slate-100 bg-white/90 text-slate-700 hover:bg-white hover:text-slate-900 border border-slate-200/60 hover:border-slate-300/80 shadow-sm hover:shadow-md'
                 }`}
               >
                 <Icon className="w-4 h-4" />

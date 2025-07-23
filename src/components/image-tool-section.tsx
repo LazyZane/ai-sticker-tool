@@ -564,24 +564,26 @@ export function ImageToolSection() {
   // --- JSX ---
   return (
     <div className="max-w-4xl mx-auto p-4">
-      <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-white dark:text-white text-gray-900 mb-2">AI表情包图片处理工具</h1>
-        <p className="text-slate-300 dark:text-slate-300 text-gray-600">简单、高效，一键生成符合规范的表情包</p>
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 dark:from-emerald-400 dark:to-teal-400 from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3">AI表情包图片处理工具</h1>
+        <p className="text-slate-300 dark:text-slate-300 text-slate-600 text-lg">简单、高效，一键生成符合规范的表情包</p>
       </div>
 
       <div
         onDrop={handleDrop} onDragOver={handleDragOver}
-        className="border-2 border-dashed border-slate-600 rounded-lg p-8 text-center hover:border-cyan-500 transition-colors duration-200 cursor-pointer mb-6 dark:border-slate-600 dark:hover:border-cyan-500 border-gray-300 hover:border-cyan-500"
+        className="border-2 border-dashed border-slate-600/60 rounded-2xl p-10 text-center hover:border-emerald-400 transition-all duration-300 cursor-pointer mb-8 bg-slate-800/20 hover:bg-slate-800/30 dark:border-slate-600/60 dark:hover:border-emerald-400 dark:bg-slate-800/20 dark:hover:bg-slate-800/30 border-slate-300/60 hover:border-emerald-500 bg-slate-50/50 hover:bg-slate-50/80 hover:shadow-xl"
         onClick={() => fileInputRef.current?.click()}
       >
-        <Upload className="w-10 h-10 text-slate-400 dark:text-slate-400 text-gray-400 mx-auto mb-3" />
-        <h3 className="text-lg font-semibold text-white dark:text-white text-gray-900 mb-1">点击或拖拽图片到此处上传</h3>
-        <p className="text-slate-400 dark:text-slate-400 text-gray-500 text-sm">（最多上传24张）</p>
+        <div className="p-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl w-fit mx-auto mb-4">
+          <Upload className="w-8 h-8 text-white" />
+        </div>
+        <h3 className="text-xl font-bold text-slate-100 dark:text-slate-100 text-slate-800 mb-2">点击或拖拽图片到此处上传</h3>
+        <p className="text-slate-400 dark:text-slate-400 text-slate-500">支持 JPG、PNG、GIF 格式，最多上传24张</p>
         <input ref={fileInputRef} type="file" multiple accept="image/*" className="hidden" onChange={(e) => e.target.files && handleFileUpload(e.target.files)} />
       </div>
 
       {images.length > 0 && (
-        <div className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 animate-fade-in dark:bg-slate-800/50 dark:border-slate-700/50 bg-white/80 border-gray-200/50">
+        <div className="bg-slate-800/60 rounded-2xl border border-slate-700/40 p-8 animate-fade-in shadow-2xl shadow-slate-900/20 dark:bg-slate-800/60 dark:border-slate-700/40 dark:shadow-slate-900/20 bg-white/95 border-slate-200/60 shadow-slate-200/30">
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white mb-3">已上传图片 ({images.length})</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">

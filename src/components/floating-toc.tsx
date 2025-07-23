@@ -47,16 +47,18 @@ export function FloatingTOC() {
   }
 
   return (
-    <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700/50 p-4 dark:bg-slate-800/30 dark:border-slate-700/50 bg-white/80 border-gray-200/50">
+    <div className="bg-slate-800/40 backdrop-blur-md rounded-2xl border border-slate-700/40 p-6 shadow-xl shadow-slate-900/10 dark:bg-slate-800/40 dark:border-slate-700/40 dark:shadow-slate-900/10 bg-white/95 border-slate-200/60 shadow-slate-200/20">
       {/* 标题 */}
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center space-x-2">
-          <List className="w-4 h-4 text-cyan-400" />
-          <h3 className="font-semibold text-white dark:text-white text-gray-900">目录导航</h3>
+      <div className="flex items-center justify-between mb-5">
+        <div className="flex items-center space-x-3">
+          <div className="p-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg">
+            <List className="w-4 h-4 text-white" />
+          </div>
+          <h3 className="font-bold text-slate-100 dark:text-slate-100 text-slate-800">目录导航</h3>
         </div>
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
-          className="p-1 hover:bg-slate-700/50 rounded transition-colors duration-200 dark:hover:bg-slate-700/50 hover:bg-gray-100/50"
+          className="p-2 hover:bg-slate-700/60 rounded-lg transition-all duration-300 dark:hover:bg-slate-700/60 hover:bg-slate-100/80 hover:shadow-md"
         >
           <ChevronRight 
             className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
@@ -68,16 +70,16 @@ export function FloatingTOC() {
 
       {/* 目录列表 */}
       {!isCollapsed && (
-        <nav className="space-y-1">
+        <nav className="space-y-2">
           {tocItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`w-full text-left px-3 py-2 rounded-lg transition-all duration-200 ${
+              className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-300 ${
                 activeId === item.id
-                  ? 'bg-cyan-600/20 text-cyan-300 border-l-2 border-cyan-500'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/30 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-700/30 text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
-              } ${item.level === 2 ? 'ml-4 text-sm' : ''}`}
+                  ? 'bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border-l-4 border-emerald-400 shadow-lg shadow-emerald-500/10'
+                  : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700/40 dark:text-slate-300 dark:hover:text-slate-100 dark:hover:bg-slate-700/40 text-slate-600 hover:text-slate-800 hover:bg-slate-100/60 hover:shadow-md'
+              } ${item.level === 2 ? 'ml-6 text-sm' : 'font-medium'}`}
             >
               <span className={item.level === 2 ? 'opacity-75' : ''}>
                 {item.title}
