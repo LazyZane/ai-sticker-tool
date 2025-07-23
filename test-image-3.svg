@@ -1,0 +1,5 @@
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="300" fill="#9B59B6"/>
+  <rect x="50" y="50" width="400" height="200" fill="#F39C12"/>
+  <text x="250" y="160" text-anchor="middle" font-family="Arial" font-size="24" fill="white">横图测试</text>
+</svg>
