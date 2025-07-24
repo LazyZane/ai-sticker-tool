@@ -565,27 +565,27 @@ export function ImageToolSection() {
   return (
     <div className="max-w-4xl mx-auto p-4">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 dark:from-emerald-400 dark:to-teal-400 from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3">AI表情包图片处理工具</h1>
-        <p className="text-slate-300 dark:text-slate-300 text-slate-600 text-lg">简单、高效，一键生成符合规范的表情包</p>
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3">AI表情包图片处理工具</h1>
+        <p className="text-slate-600 dark:text-slate-300 text-lg">简单、高效，一键生成符合规范的表情包</p>
       </div>
 
       <div
         onDrop={handleDrop} onDragOver={handleDragOver}
-        className="border-2 border-dashed border-slate-600/60 rounded-2xl p-10 text-center hover:border-emerald-400 transition-all duration-300 cursor-pointer mb-8 bg-slate-800/20 hover:bg-slate-800/30 dark:border-slate-600/60 dark:hover:border-emerald-400 dark:bg-slate-800/20 dark:hover:bg-slate-800/30 border-slate-300/60 hover:border-emerald-500 bg-slate-50/50 hover:bg-slate-50/80 hover:shadow-xl"
+        className="border-2 border-dashed border-slate-300/60 dark:border-slate-600/60 rounded-2xl p-10 text-center hover:border-blue-400 dark:hover:border-blue-400 transition-all duration-300 cursor-pointer mb-8 bg-slate-50/50 dark:bg-slate-800/20 hover:bg-slate-50/80 dark:hover:bg-slate-800/30 hover:shadow-lg"
         onClick={() => fileInputRef.current?.click()}
       >
-        <div className="p-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl w-fit mx-auto mb-4">
+        <div className="p-4 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl w-fit mx-auto mb-4 shadow-sm">
           <Upload className="w-8 h-8 text-white" />
         </div>
-        <h3 className="text-xl font-bold text-slate-100 dark:text-slate-100 text-slate-800 mb-2">点击或拖拽图片到此处上传</h3>
-        <p className="text-slate-400 dark:text-slate-400 text-slate-500">支持 JPG、PNG、GIF 格式，最多上传24张</p>
+        <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">点击或拖拽图片到此处上传</h3>
+        <p className="text-slate-500 dark:text-slate-400">支持 JPG、PNG、GIF 格式，最多上传24张</p>
         <input ref={fileInputRef} type="file" multiple accept="image/*" className="hidden" onChange={(e) => e.target.files && handleFileUpload(e.target.files)} />
       </div>
 
       {images.length > 0 && (
-        <div className="bg-slate-800/60 rounded-2xl border border-slate-700/40 p-8 animate-fade-in shadow-2xl shadow-slate-900/20 dark:bg-slate-800/60 dark:border-slate-700/40 dark:shadow-slate-900/20 bg-white/95 border-slate-200/60 shadow-slate-200/30">
+        <div className="bg-white/95 dark:bg-slate-800/60 rounded-2xl border border-slate-200/60 dark:border-slate-700/40 p-8 animate-fade-in shadow-lg">
           <div className="mb-6">
-            <h3 className="text-lg font-semibold text-white mb-3">已上传图片 ({images.length})</h3>
+            <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-3">已上传图片 ({images.length})</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
               {images.map((image, index) => (
                 <div key={image.id} className="relative group">

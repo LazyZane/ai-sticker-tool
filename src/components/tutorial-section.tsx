@@ -17,17 +17,17 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
       icon: BookOpen,
       content: (
         <div className="space-y-6">
-          <div className="bg-blue-900/30 border border-blue-700/50 rounded-lg p-6">
+          <div className="bg-blue-50/80 dark:bg-blue-900/30 border border-blue-200/60 dark:border-blue-700/50 rounded-lg p-6">
             <div className="flex items-center space-x-2 mb-4">
-              <Info className="w-5 h-5 text-blue-400" />
-              <h3 className="text-lg font-semibold text-blue-300">课程前言</h3>
+              <Info className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-300">课程前言</h3>
             </div>
-            <p className="text-slate-300 leading-relaxed">
-              你是否也曾使用过 <code className="bg-slate-700 px-2 py-1 rounded text-cyan-300">豆包</code>、
-              <code className="bg-slate-700 px-2 py-1 rounded text-cyan-300">DeepSeek</code> 这类 AI 工具，
+            <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+              你是否也曾使用过 <code className="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-blue-700 dark:text-cyan-300">豆包</code>、
+              <code className="bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded text-blue-700 dark:text-cyan-300">DeepSeek</code> 这类 AI 工具，
               但总感觉没有完全理解它们的工作原理？想深入学习，又担心理论知识太过枯燥？
             </p>
-            <p className="text-slate-300 leading-relaxed mt-4">
+            <p className="text-slate-700 dark:text-slate-300 leading-relaxed mt-4">
               这门课就是为你准备的。我们将通过一个非常有趣的实践项目——制作一套属于你自己的微信表情包，
               让你在动手过程中轻松掌握 AI 的进一步知识和实用工具，成为朋友中更懂 AI 的人。
             </p>
@@ -41,16 +41,16 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
       icon: Sparkles,
       content: (
         <div className="space-y-6">
-          <div className="bg-green-900/30 border border-green-700/50 rounded-lg p-6">
+          <div className="bg-green-50/80 dark:bg-green-900/30 border border-green-200/60 dark:border-green-700/50 rounded-lg p-6">
             <div className="flex items-center space-x-2 mb-4">
-              <Lightbulb className="w-5 h-5 text-green-400" />
-              <h3 className="text-lg font-semibold text-green-300">AI 核心知识加油站 ⛽️</h3>
+              <Lightbulb className="w-5 h-5 text-green-600 dark:text-green-400" />
+              <h3 className="text-lg font-semibold text-green-800 dark:text-green-300">AI 核心知识加油站 ⛽️</h3>
             </div>
 
-            <div className="bg-blue-900/20 border border-blue-700/30 rounded-lg p-4 mb-6">
-              <h4 className="font-semibold text-blue-300 mb-2">💡 温馨提示</h4>
-              <p className="text-slate-300 text-sm">
-                在开始前，我们先快速了解几个概念。<strong className="text-cyan-300">看不懂没关系，你只需要有个大概印象</strong>，
+            <div className="bg-blue-50/60 dark:bg-blue-900/20 border border-blue-200/50 dark:border-blue-700/30 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">💡 温馨提示</h4>
+              <p className="text-slate-700 dark:text-slate-300 text-sm">
+                在开始前，我们先快速了解几个概念。<strong className="text-blue-700 dark:text-cyan-300">看不懂没关系，你只需要有个大概印象</strong>，
                 因为我们会在后面的每一步实践中，让你亲身感受到它们到底是什么、怎么用！
               </p>
             </div>
@@ -729,8 +729,8 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                 onClick={() => setActiveStep(index)}
                 className={`flex items-center space-x-2 px-5 py-3 rounded-xl transition-all duration-300 ${
                   activeStep === index
-                    ? 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-xl shadow-indigo-500/25 transform scale-105'
-                    : 'bg-slate-800/60 text-slate-300 hover:bg-slate-700/70 hover:text-slate-100 dark:bg-slate-800/60 dark:text-slate-300 dark:hover:bg-slate-700/70 dark:hover:text-slate-100 bg-white/90 text-slate-700 hover:bg-white hover:text-slate-900 border border-slate-200/60 hover:border-slate-300/80 shadow-sm hover:shadow-md'
+                    ? 'bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 text-white shadow-lg shadow-blue-500/25 transform scale-105'
+                    : 'bg-white/90 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700/70 hover:text-slate-900 dark:hover:text-slate-100 border border-slate-200/60 dark:border-slate-700/50 hover:border-slate-300/80 dark:hover:border-slate-600/60 shadow-sm hover:shadow-md'
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -742,9 +742,9 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
       </div>
 
       {/* 内容区域 */}
-      <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700/50 p-8">
-        <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-          {React.createElement(tutorialSteps[activeStep].icon, { className: "w-6 h-6 mr-3 text-cyan-400" })}
+      <div className="bg-white/95 dark:bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-200/60 dark:border-slate-700/50 p-8 shadow-lg">
+        <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-6 flex items-center">
+          {React.createElement(tutorialSteps[activeStep].icon, { className: "w-6 h-6 mr-3 text-blue-500 dark:text-cyan-400" })}
           {tutorialSteps[activeStep].title}
         </h2>
         

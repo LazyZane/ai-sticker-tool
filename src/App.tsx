@@ -8,7 +8,7 @@ function App() {
   const [activeSection, setActiveSection] = useState<'tutorial' | 'tool'>('tutorial')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 dark:from-slate-950 dark:via-indigo-950 dark:to-slate-950 from-slate-50 via-indigo-50 to-slate-50">
+    <div className="min-h-screen bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900 from-slate-100 via-blue-50 to-indigo-100">
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
 
       <main className="container mx-auto px-4 py-8">

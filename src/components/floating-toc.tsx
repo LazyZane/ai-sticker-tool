@@ -47,23 +47,23 @@ export function FloatingTOC() {
   }
 
   return (
-    <div className="bg-slate-800/40 backdrop-blur-md rounded-2xl border border-slate-700/40 p-6 shadow-xl shadow-slate-900/10 dark:bg-slate-800/40 dark:border-slate-700/40 dark:shadow-slate-900/10 bg-white/95 border-slate-200/60 shadow-slate-200/20">
+    <div className="bg-white/95 dark:bg-slate-800/40 backdrop-blur-md rounded-2xl border border-slate-200/60 dark:border-slate-700/40 p-6 shadow-lg">
       {/* 标题 */}
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center space-x-3">
-          <div className="p-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg">
+          <div className="p-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-sm">
             <List className="w-4 h-4 text-white" />
           </div>
-          <h3 className="font-bold text-slate-100 dark:text-slate-100 text-slate-800">目录导航</h3>
+          <h3 className="font-bold text-slate-800 dark:text-slate-100">目录导航</h3>
         </div>
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
-          className="p-2 hover:bg-slate-700/60 rounded-lg transition-all duration-300 dark:hover:bg-slate-700/60 hover:bg-slate-100/80 hover:shadow-md"
+          className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700/60 rounded-lg transition-all duration-300 hover:shadow-sm"
         >
-          <ChevronRight 
-            className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+          <ChevronRight
+            className={`w-4 h-4 text-slate-600 dark:text-slate-400 transition-transform duration-200 ${
               isCollapsed ? '' : 'rotate-90'
-            }`} 
+            }`}
           />
         </button>
       </div>
@@ -77,8 +77,8 @@ export function FloatingTOC() {
               onClick={() => scrollToSection(item.id)}
               className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-300 ${
                 activeId === item.id
-                  ? 'bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border-l-4 border-emerald-400 shadow-lg shadow-emerald-500/10'
-                  : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700/40 dark:text-slate-300 dark:hover:text-slate-100 dark:hover:bg-slate-700/40 text-slate-600 hover:text-slate-800 hover:bg-slate-100/60 hover:shadow-md'
+                  ? 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-700 dark:text-blue-300 border-l-4 border-blue-500 dark:border-blue-400 shadow-md'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 hover:bg-slate-100/60 dark:hover:bg-slate-700/40 hover:shadow-sm'
               } ${item.level === 2 ? 'ml-6 text-sm' : 'font-medium'}`}
             >
               <span className={item.level === 2 ? 'opacity-75' : ''}>
@@ -90,14 +90,14 @@ export function FloatingTOC() {
       )}
 
       {/* 进度指示 */}
-      <div className="mt-4 pt-4 border-t border-slate-700/50">
-        <div className="flex items-center justify-between text-sm text-slate-400 mb-2">
+      <div className="mt-4 pt-4 border-t border-slate-200/60 dark:border-slate-700/50">
+        <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400 mb-2">
           <span>学习进度</span>
           <span>3/6</span>
         </div>
-        <div className="w-full bg-slate-700/50 rounded-full h-2">
-          <div 
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300"
+        <div className="w-full bg-slate-200/60 dark:bg-slate-700/50 rounded-full h-2">
+          <div
+            className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-300"
             style={{ width: '50%' }}
           />
         </div>
