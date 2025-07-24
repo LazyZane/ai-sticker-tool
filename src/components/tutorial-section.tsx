@@ -841,6 +841,49 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>
+
+      {/* 飞书知识库横幅 */}
+      <div className="mt-8">
+        <a
+          href="https://l0c34idk7v.feishu.cn/wiki/XyEQw7J1YidUSOkbb3FcIyxNngF?fromScene=spaceOverview"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full group"
+        >
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
+            {/* 背景装饰 */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+
+            {/* 内容 */}
+            <div className="relative flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-1">访问飞书知识库</h3>
+                  <p className="text-blue-100 text-sm">获取更多详细教程和进阶技巧</p>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0">
+                <div className="flex items-center space-x-2 text-white/80 group-hover:text-white transition-colors duration-300">
+                  <span className="text-sm font-medium">立即访问</span>
+                  <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   )
 }
