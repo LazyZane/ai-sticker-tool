@@ -402,7 +402,7 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   </div>
 
                   <div className="mt-4 p-3 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl border border-emerald-500/20">
-                    <p className="text-sm text-emerald-200 flex items-center">
+                    <p className="text-sm text-emerald-700 dark:text-emerald-200 flex items-center">
                       <span className="mr-2">💡</span>
                       这是一个完整的表情包制作助手提示词，可以直接复制到任何AI工具中使用。
                     </p>
@@ -505,14 +505,67 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   </ul>
                 </div>
 
-                <div className="bg-purple-50/80 dark:bg-purple-900/20 border border-purple-200/60 dark:border-purple-700/30 rounded p-3 mt-3">
-                  <h5 className="font-semibold text-purple-700 dark:text-purple-300 text-sm mb-2">📝 示例提示词：</h5>
-                  <div className="bg-slate-100/80 dark:bg-slate-900/50 rounded p-2 border border-slate-200/60 dark:border-slate-700/50">
-                    <p className="text-slate-700 dark:text-slate-300 text-sm font-mono">
-                      我要制作一套"可爱橘猫日常"表情包，主角是胖乎乎的橘色短毛猫。请帮我：<br/>
-                      1. 设计12个日常表情（开心、生气、困惑、撒娇等）<br/>
-                      2. 为每个表情生成详细的绘画描述<br/>
-                      3. 确保风格统一，适合微信使用
+                <div className="bg-gradient-to-br from-purple-50/80 via-pink-50/80 to-indigo-50/80 dark:from-purple-900/30 dark:via-pink-900/30 dark:to-indigo-900/30 border border-purple-200/60 dark:border-purple-500/30 rounded-2xl p-6 shadow-lg mt-3">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-sm">
+                        <span className="text-white text-sm">📝</span>
+                      </div>
+                      <h5 className="font-bold text-purple-800 dark:text-purple-200 text-base">示例提示词：表情包助手</h5>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const promptText = document.getElementById('example-prompt-text')?.textContent || '';
+                        navigator.clipboard.writeText(promptText).then(() => {
+                          // 可以添加复制成功的提示
+                          const button = document.querySelector('[data-copy-example-button]');
+                          if (button) {
+                            const originalText = button.textContent;
+                            button.textContent = '已复制!';
+                            setTimeout(() => {
+                              button.textContent = originalText;
+                            }, 2000);
+                          }
+                        });
+                      }}
+                      data-copy-example-button
+                      className="text-sm bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      📋 复制全文
+                    </button>
+                  </div>
+
+                  <div className="bg-slate-100/80 dark:bg-slate-900/70 rounded-xl p-4 max-h-64 overflow-y-auto border border-slate-300/60 dark:border-slate-700/50">
+                    <pre id="example-prompt-text" className="text-slate-800 dark:text-slate-300 text-xs font-mono whitespace-pre-wrap leading-relaxed">
+{`提示词：表情包助手
+你是一个专业的"表情包制作需求引导与生成助手"。你的核心任务是快速理解用户的基本需求，然后主动为用户设计一套完整的表情包初步方案（包括角色形象、每个表情的画面描述及建议的单段简体中文配文、宣传素材等），并引导用户对这个方案进行"批阅"和反馈，特别是针对每个表情确认"是否有配文"以及（如有）"配文内容是否满意"，并严格遵守微信平台关于宣传素材（尤其是横幅无文字）的规范。最终，根据用户的完全确认结果，生成一份可以直接交付给设计师或AI绘画工具（如Lovart）的、详细且规范的表情包制作需求文档。
+
+核心流程与引导逻辑：
+
+第一阶段：快速需求捕获
+1.欢迎与核心输入获取：
+* "您好！我是您的表情包制作需求引导助手。想制作什么样的表情包呢？首先，请问您是否有核心的主角形象或参考图片可以提供给我？
+如果有，请发给我看看。如果没有，我们也可以一起构思一个全新的形象。"
+
+2.参考图意图澄清 (如用户提供图片)：
+* "收到您的图片！这张图很有特色。关于它，请问：
+* A. 您是希望我们严格按照这张图片的现有形象和风格来进行表情包创作，仅设计不同表情动作吗？
+* B. 还是说，这张图片更多是作为灵感参考，您希望我们以此为基础，为您衍生或重新设计一个更适合表情包的卡通IP形象？
+请告诉我您的选择 (A 或 B)，这将决定我们的设计方向。"
+
+3. 基本盘确认：
+* "好的，我明白了。接下来，您计划制作多少个表情呢？（常见的有8个、16个、24个。如果您不确定，我可以先按经典的 16个静态表情包 为您设计一套方案。）"
+* "我们将默认按【静态表情包】为您设计。如果您需要动态的，或对类型有其他想法，请告诉我。"
+* (可选) "这套表情包是否有一个您期望的主题或核心概念呢？（例如：主角的日常喜怒哀乐等）如果没有，我会根据主角形象为您构思一些通用且有趣的表情主题。"
+
+你现在已经准备好开始与第一位用户进行对话了。请从"第一阶段：快速需求捕获"的第一个问题开始。`}
+                    </pre>
+                  </div>
+
+                  <div className="mt-4 p-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-500/20">
+                    <p className="text-sm text-purple-700 dark:text-purple-200 flex items-center">
+                      <span className="mr-2">💡</span>
+                      这是一个简化版的表情包制作助手提示词，可以直接复制到任何AI工具中使用。
                     </p>
                   </div>
                 </div>
