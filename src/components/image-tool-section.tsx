@@ -566,7 +566,7 @@ export function ImageToolSection() {
     <div className="max-w-4xl mx-auto p-4">
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3">AI表情包图片处理工具</h1>
-        <p className="text-slate-600 dark:text-slate-300 text-lg">简单、高效，一键生成符合规范的表情包</p>
+        <p className="text-slate-700 dark:text-slate-300 text-lg">简单、高效，一键生成符合规范的表情包</p>
       </div>
 
       <div
@@ -578,7 +578,7 @@ export function ImageToolSection() {
           <Upload className="w-8 h-8 text-white" />
         </div>
         <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">点击或拖拽图片到此处上传</h3>
-        <p className="text-slate-500 dark:text-slate-400">支持 JPG、PNG、GIF 格式，最多上传24张</p>
+        <p className="text-slate-600 dark:text-slate-400">支持 JPG、PNG、GIF 格式，最多上传24张</p>
         <input ref={fileInputRef} type="file" multiple accept="image/*" className="hidden" onChange={(e) => e.target.files && handleFileUpload(e.target.files)} />
       </div>
 
@@ -619,14 +619,14 @@ export function ImageToolSection() {
               <h2 className="text-xl font-bold text-white flex items-center"><Scissors className="mr-2" /> 统一裁剪设置</h2>
               <button onClick={() => setCropEnabled(!cropEnabled)} className="flex items-center space-x-2 text-sm">
                 {cropEnabled ? <ToggleRight className="w-10 h-10 text-cyan-400" /> : <ToggleLeft className="w-10 h-10 text-slate-500" />}
-                <span className={cropEnabled ? 'text-white' : 'text-slate-400'}>{cropEnabled ? '已启用' : '未启用'}</span>
+                <span className={cropEnabled ? 'text-white' : 'text-slate-300 dark:text-slate-400'}>{cropEnabled ? '已启用' : '未启用'}</span>
               </button>
             </div>
             
             {cropEnabled && (
               <div className="grid lg:grid-cols-2 gap-6 animate-fade-in">
                   <div>
-                    <p className="text-sm text-slate-400 mb-2">在第一张图上设置裁剪模板</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">在第一张图上设置裁剪模板</p>
                     <div className="bg-slate-900/50 rounded-lg flex justify-center items-center p-2 min-h-[200px]">
                       <canvas
                         ref={canvasRef}
@@ -639,7 +639,7 @@ export function ImageToolSection() {
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <p className="text-sm text-slate-400">比例约束</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">比例约束</p>
                     <div className="grid grid-cols-2 gap-2">
                       {ratios.filter(ratio => ratio.id !== 'custom').map((ratio) => (
                         <button key={ratio.id} onClick={() => applyRatio(ratio.id)} className={`p-2 rounded text-sm transition-all duration-200 ${selectedRatioId === ratio.id ? 'bg-cyan-600 text-white' : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50'}`}>
@@ -652,7 +652,7 @@ export function ImageToolSection() {
                     <div className="space-y-3">
                       <button
                         onClick={() => applyRatio('custom')}
-                        className={`w-full p-2 rounded text-sm transition-all duration-200 ${selectedRatioId === 'custom' ? 'bg-cyan-600 text-white' : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50'}`}
+                        className={`w-full p-2 rounded text-sm transition-all duration-200 ${selectedRatioId === 'custom' ? 'bg-cyan-600 text-white' : 'bg-slate-200 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600/50'}`}
                       >
                         自定义比例
                       </button>
@@ -668,7 +668,7 @@ export function ImageToolSection() {
                             className="w-16 px-2 py-1 bg-slate-700 text-white rounded text-sm"
                             placeholder="3"
                           />
-                          <span className="text-slate-400">:</span>
+                          <span className="text-slate-600 dark:text-slate-400">:</span>
                           <input
                             type="number"
                             min="0.1"
@@ -701,7 +701,7 @@ export function ImageToolSection() {
           <div>
             <h2 className="text-xl font-bold text-white flex items-center mb-4"><Settings className="mr-2" /> 格式化与下载</h2>
             <div className="mb-4">
-              <p className="text-sm text-slate-400 mb-2">选择输出规格</p>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">选择输出规格</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                 {presets.map((preset) => (
                   <button
@@ -710,7 +710,7 @@ export function ImageToolSection() {
                     className={`p-3 rounded-lg border text-left text-sm transition-all duration-200 ${
                       selectedPresetId === preset.id
                         ? 'bg-cyan-600/20 border-cyan-500 text-cyan-300'
-                        : 'bg-slate-700/50 border-slate-600 text-slate-300 hover:border-slate-500'
+                        : 'bg-slate-100 dark:bg-slate-700/50 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-500'
                     }`}
                   >
                     <div className="font-medium">{preset.name}</div>
@@ -721,16 +721,16 @@ export function ImageToolSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-between bg-slate-900/50 p-4 rounded-lg">
-              <div className="text-slate-300 mb-4 sm:mb-0">
+              <div className="text-slate-200 dark:text-slate-300 mb-4 sm:mb-0">
                 <p>将处理 <strong className="text-white">{images.length}</strong> 张图片</p>
-                <p>裁剪模式: <strong className={cropEnabled ? 'text-cyan-400' : 'text-slate-500'}>{cropEnabled ? '已启用' : '未启用'}</strong></p>
+                <p>裁剪模式: <strong className={cropEnabled ? 'text-cyan-400' : 'text-slate-400 dark:text-slate-500'}>{cropEnabled ? '已启用' : '未启用'}</strong></p>
               </div>
               <button onClick={generateAndDownload} disabled={images.length === 0} className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 disabled:from-slate-600 disabled:to-slate-600 disabled:cursor-not-allowed text-white px-8 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
                 <Download className="w-5 h-5" />
                 <span>生成并下载全部</span>
               </button>
             </div>
-            <p className="text-center text-sm text-slate-400 mt-4 h-5 flex items-center justify-center">
+            <p className="text-center text-sm text-slate-600 dark:text-slate-400 mt-4 h-5 flex items-center justify-center">
               {status.includes('成功') && <CheckCircle className="w-4 h-4 mr-2 text-green-400" />}
               {status}
             </p>

@@ -131,55 +131,55 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
             </p>
 
             <div className="space-y-3">
-              <div className="bg-slate-800/50 rounded-lg p-3">
-                <h5 className="font-semibold text-white text-sm mb-1">Chat 智能体</h5>
-                <p className="text-slate-300 text-xs">
-                  这是最基础的形态，就是我们常用的 <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">豆包</code>、
-                  <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">元宝</code> 等聊天机器人。
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-3 border border-slate-200/60 dark:border-slate-700/50">
+                <h5 className="font-semibold text-slate-800 dark:text-white text-sm mb-1">Chat 智能体</h5>
+                <p className="text-slate-700 dark:text-slate-300 text-sm">
+                  这是最基础的形态，就是我们常用的 <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">豆包</code>、
+                  <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">元宝</code> 等聊天机器人。
                 </p>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-3">
-                <h5 className="font-semibold text-white text-sm mb-1">工作流类智能体</h5>
-                <p className="text-slate-300 text-xs mb-2">
-                  它能将多个 AI 功能串联起来，形成<strong className="text-cyan-300">自动化的工作流程</strong>。如coze扣子。
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-3 border border-slate-200/60 dark:border-slate-700/50">
+                <h5 className="font-semibold text-slate-800 dark:text-white text-sm mb-1">工作流类智能体</h5>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">
+                  它能将多个 AI 功能串联起来，形成<strong className="text-blue-700 dark:text-cyan-300">自动化的工作流程</strong>。如coze扣子。
                 </p>
-                <p className="text-slate-300 text-xs">
+                <p className="text-slate-700 dark:text-slate-300 text-sm">
                   更多工作流智能体：
                   <a href="https://waytoagi.feishu.cn/wiki/VQA2w6bEUiFHRmk2u7icvCpPnkg"
                      target="_blank" rel="noopener noreferrer"
-                     className="text-cyan-400 hover:text-cyan-300 underline ml-1">
+                     className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline ml-1">
                     查看详情 →
                   </a>
                 </p>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-3">
-                <h5 className="font-semibold text-white text-sm mb-1">通用智能体</h5>
-                <p className="text-slate-300 text-xs">
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-3 border border-slate-200/60 dark:border-slate-700/50">
+                <h5 className="font-semibold text-slate-800 dark:text-white text-sm mb-1">通用智能体</h5>
+                <p className="text-slate-700 dark:text-slate-300 text-sm">
                   它的目标是能像人一样理解复杂的开放式任务，并自主地进行规划和执行。
                   这是 AI 未来的一个重要发展方向。如manus、coze空间等。
                 </p>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-3">
-                <h5 className="font-semibold text-white text-sm mb-1">垂类智能体</h5>
-                <p className="text-slate-300 text-xs mb-2">
-                  它<strong className="text-cyan-300">专注于某个特定领域</strong>，因此表现得非常专业。
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-3 border border-slate-200/60 dark:border-slate-700/50">
+                <h5 className="font-semibold text-slate-800 dark:text-white text-sm mb-1">垂类智能体</h5>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">
+                  它<strong className="text-blue-700 dark:text-cyan-300">专注于某个特定领域</strong>，因此表现得非常专业。
                 </p>
-                <div className="bg-blue-900/20 border border-blue-700/30 rounded p-2">
-                  <h6 className="font-semibold text-blue-300 text-xs mb-1">💡 垂类智能体举例：星流 (Lovart)</h6>
-                  <p className="text-slate-300 text-xs">
-                    它是一个专注于 AI 绘画领域的垂类智能体。它的优势在于<strong className="text-cyan-300">内置了大量针对艺术创作的优化</strong>。
+                <div className="bg-blue-50/80 dark:bg-blue-900/20 border border-blue-200/60 dark:border-blue-700/30 rounded p-2">
+                  <h6 className="font-semibold text-blue-700 dark:text-blue-300 text-sm mb-1">💡 垂类智能体举例：星流 (Lovart)</h6>
+                  <p className="text-slate-700 dark:text-slate-300 text-sm">
+                    它是一个专注于 AI 绘画领域的垂类智能体。它的优势在于<strong className="text-blue-700 dark:text-cyan-300">内置了大量针对艺术创作的优化</strong>。
                     你输入的简单需求，会被它内部的复杂工作流自动"翻译"成更专业、更适合底层绘画模型的提示词。
-                    <strong className="text-cyan-300">它帮你完成了大量普通用户不知道如何操作的"幕后工作"</strong>，所以出图效果和体验会更好。
+                    <strong className="text-blue-700 dark:text-cyan-300">它帮你完成了大量普通用户不知道如何操作的"幕后工作"</strong>，所以出图效果和体验会更好。
                   </p>
                 </div>
-                <p className="text-slate-300 text-xs mt-2">
+                <p className="text-slate-700 dark:text-slate-300 text-sm mt-2">
                   更多智能体了解：
                   <a href="https://waytoagi.feishu.cn/wiki/AVTMwH1k6iN5pIkrjn6cPm2Tnae"
                      target="_blank" rel="noopener noreferrer"
-                     className="text-cyan-400 hover:text-cyan-300 underline ml-1">
+                     className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline ml-1">
                     查看详情 →
                   </a>
                 </p>
@@ -444,16 +444,16 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   首先，我们需要确定表情包的主角和基本风格。这一步很关键，因为它决定了整套表情包的统一性。
                 </p>
 
-                <div className="bg-green-900/20 border border-green-700/30 rounded p-3 mb-3">
-                  <h5 className="font-semibold text-green-300 text-sm mb-2">🔧 推荐工具：</h5>
+                <div className="bg-green-50/80 dark:bg-green-900/20 border border-green-200/60 dark:border-green-700/30 rounded p-3 mb-3">
+                  <h5 className="font-semibold text-green-700 dark:text-green-300 text-sm mb-2">🔧 推荐工具：</h5>
                   <div className="space-y-1">
-                    <p className="text-slate-300 text-xs">
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
                       • <a href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer"
-                           className="text-cyan-400 hover:text-cyan-300 underline">豆包</a> (免费，支持图像生成)
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">豆包</a> (免费，支持图像生成)
                     </p>
-                    <p className="text-slate-300 text-xs">
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
                       • <a href="https://lovart.ai/" target="_blank" rel="noopener noreferrer"
-                           className="text-cyan-400 hover:text-cyan-300 underline">星流 Lovart</a> (专业绘画工具)
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">星流 Lovart</a> (专业绘画工具)
                     </p>
                   </div>
                 </div>
@@ -477,16 +477,16 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   确定了主角形象后，我们需要规划整套表情包的内容和风格细节。
                 </p>
 
-                <div className="bg-green-900/20 border border-green-700/30 rounded p-3 mb-3">
-                  <h5 className="font-semibold text-green-300 text-sm mb-2">🔧 推荐工具：</h5>
+                <div className="bg-green-50/80 dark:bg-green-900/20 border border-green-200/60 dark:border-green-700/30 rounded p-3 mb-3">
+                  <h5 className="font-semibold text-green-700 dark:text-green-300 text-sm mb-2">🔧 推荐工具：</h5>
                   <div className="space-y-1">
-                    <p className="text-slate-300 text-xs">
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
                       • <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer"
-                           className="text-cyan-400 hover:text-cyan-300 underline">DeepSeek</a> (免费，擅长内容规划)
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">DeepSeek</a> (免费，擅长内容规划)
                     </p>
-                    <p className="text-slate-300 text-xs">
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
                       • <a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer"
-                           className="text-cyan-400 hover:text-cyan-300 underline">Kimi</a> (免费，支持长文本)
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">Kimi</a> (免费，支持长文本)
                     </p>
                   </div>
                 </div>
@@ -501,10 +501,10 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   </ul>
                 </div>
 
-                <div className="bg-purple-900/20 border border-purple-700/30 rounded p-3 mt-3">
-                  <h5 className="font-semibold text-purple-300 text-sm mb-2">📝 示例提示词：</h5>
-                  <div className="bg-slate-900/50 rounded p-2">
-                    <p className="text-slate-300 text-xs font-mono">
+                <div className="bg-purple-50/80 dark:bg-purple-900/20 border border-purple-200/60 dark:border-purple-700/30 rounded p-3 mt-3">
+                  <h5 className="font-semibold text-purple-700 dark:text-purple-300 text-sm mb-2">📝 示例提示词：</h5>
+                  <div className="bg-slate-100/80 dark:bg-slate-900/50 rounded p-2 border border-slate-200/60 dark:border-slate-700/50">
+                    <p className="text-slate-700 dark:text-slate-300 text-sm font-mono">
                       我要制作一套"可爱橘猫日常"表情包，主角是胖乎乎的橘色短毛猫。请帮我：<br/>
                       1. 设计12个日常表情（开心、生气、困惑、撒娇等）<br/>
                       2. 为每个表情生成详细的绘画描述<br/>
@@ -523,23 +523,23 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   现在开始批量生成表情包图片，并进行后期处理。
                 </p>
 
-                <div className="bg-green-900/20 border border-green-700/30 rounded p-3 mb-3">
-                  <h5 className="font-semibold text-green-300 text-sm mb-2">🔧 推荐工具：</h5>
+                <div className="bg-green-50/80 dark:bg-green-900/20 border border-green-200/60 dark:border-green-700/30 rounded p-3 mb-3">
+                  <h5 className="font-semibold text-green-700 dark:text-green-300 text-sm mb-2">🔧 推荐工具：</h5>
                   <div className="space-y-1">
-                    <p className="text-slate-300 text-xs">
-                      • <strong className="text-cyan-300">豆包 (推荐新手)</strong>：
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
+                      • <strong className="text-blue-700 dark:text-cyan-300">豆包 (推荐新手)</strong>：
                       <a href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer"
-                         className="text-cyan-400 hover:text-cyan-300 underline ml-1">访问豆包 →</a>
+                         className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline ml-1">访问豆包 →</a>
                     </p>
-                    <p className="text-slate-300 text-xs">
-                      • <strong className="text-cyan-300">星流 Lovart (专业)</strong>：
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
+                      • <strong className="text-blue-700 dark:text-cyan-300">星流 Lovart (专业)</strong>：
                       <a href="https://lovart.ai/" target="_blank" rel="noopener noreferrer"
-                         className="text-cyan-400 hover:text-cyan-300 underline ml-1">访问星流 →</a>
+                         className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline ml-1">访问星流 →</a>
                     </p>
-                    <p className="text-slate-300 text-xs">
-                      • <strong className="text-cyan-300">Midjourney (高质量)</strong>：
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
+                      • <strong className="text-blue-700 dark:text-cyan-300">Midjourney (高质量)</strong>：
                       <a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer"
-                         className="text-cyan-400 hover:text-cyan-300 underline ml-1">访问 Midjourney →</a>
+                         className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline ml-1">访问 Midjourney →</a>
                     </p>
                   </div>
                 </div>
@@ -565,9 +565,9 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   </button>
                 </div>
 
-                <div className="bg-yellow-900/20 border border-yellow-700/30 rounded p-3 mt-3">
-                  <h5 className="font-semibold text-yellow-300 text-sm mb-2">💡 处理技巧：</h5>
-                  <ul className="text-slate-300 text-xs space-y-1">
+                <div className="bg-yellow-50/80 dark:bg-yellow-900/20 border border-yellow-200/60 dark:border-yellow-700/30 rounded p-3 mt-3">
+                  <h5 className="font-semibold text-yellow-700 dark:text-yellow-300 text-sm mb-2">💡 处理技巧：</h5>
+                  <ul className="text-slate-700 dark:text-slate-300 text-sm space-y-1">
                     <li>• 保持所有图片的风格和色调一致</li>
                     <li>• 确保主角在每张图片中的大小比例相近</li>
                     <li>• 背景建议使用透明或纯色</li>
@@ -585,11 +585,11 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   最后一步，将制作好的表情包发布到微信表情开放平台。
                 </p>
 
-                <div className="bg-green-900/20 border border-green-700/30 rounded p-3 mb-3">
-                  <h5 className="font-semibold text-green-300 text-sm mb-2">🔧 发布平台：</h5>
-                  <p className="text-slate-300 text-xs">
+                <div className="bg-green-50/80 dark:bg-green-900/20 border border-green-200/60 dark:border-green-700/30 rounded p-3 mb-3">
+                  <h5 className="font-semibold text-green-700 dark:text-green-300 text-sm mb-2">🔧 发布平台：</h5>
+                  <p className="text-slate-700 dark:text-slate-300 text-sm">
                     • <a href="https://sticker.weixin.qq.com/" target="_blank" rel="noopener noreferrer"
-                         className="text-cyan-400 hover:text-cyan-300 underline">微信表情开放平台 →</a>
+                         className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">微信表情开放平台 →</a>
                   </p>
                 </div>
 
@@ -603,9 +603,9 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   </ul>
                 </div>
 
-                <div className="bg-blue-900/20 border border-blue-700/30 rounded p-3 mt-3">
-                  <h5 className="font-semibold text-blue-300 text-sm mb-2">📋 发布要求：</h5>
-                  <div className="text-slate-300 text-xs space-y-1">
+                <div className="bg-blue-50/80 dark:bg-blue-900/20 border border-blue-200/60 dark:border-blue-700/30 rounded p-3 mt-3">
+                  <h5 className="font-semibold text-blue-700 dark:text-blue-300 text-sm mb-2">📋 发布要求：</h5>
+                  <div className="text-slate-700 dark:text-slate-300 text-sm space-y-1">
                     <p>• <strong>数量</strong>：8-24张图片</p>
                     <p>• <strong>尺寸</strong>：240×240像素</p>
                     <p>• <strong>格式</strong>：PNG/JPG/GIF</p>
@@ -614,9 +614,9 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   </div>
                 </div>
 
-                <div className="bg-purple-900/20 border border-purple-700/30 rounded p-3 mt-3">
-                  <h5 className="font-semibold text-purple-300 text-sm mb-2">🤖 AI辅助优化：</h5>
-                  <p className="text-slate-300 text-xs">
+                <div className="bg-purple-50/80 dark:bg-purple-900/20 border border-purple-200/60 dark:border-purple-700/30 rounded p-3 mt-3">
+                  <h5 className="font-semibold text-purple-700 dark:text-purple-300 text-sm mb-2">🤖 AI辅助优化：</h5>
+                  <p className="text-slate-700 dark:text-slate-300 text-sm">
                     可以使用AI工具帮助生成吸引人的表情包名称和简介，提高通过率和下载量。
                   </p>
                 </div>
@@ -756,16 +756,16 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
         <button
           onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
           disabled={activeStep === 0}
-          className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+          className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600 hover:text-slate-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 border border-slate-300/60 dark:border-slate-600/50"
         >
           <ChevronRight className="w-4 h-4 rotate-180" />
           <span>上一步</span>
         </button>
-        
+
         <button
           onClick={() => setActiveStep(Math.min(tutorialSteps.length - 1, activeStep + 1))}
           disabled={activeStep === tutorialSteps.length - 1}
-          className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+          className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm hover:shadow-md"
         >
           <span>下一步</span>
           <ChevronRight className="w-4 h-4" />
