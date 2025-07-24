@@ -55,55 +55,55 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
               </p>
             </div>
 
-            <h4 className="text-lg font-semibold text-green-300 mb-4">1. 认识不同类型的 AI 大模型</h4>
-            <p className="text-slate-300 text-sm mb-4">
-              你可以把<strong className="text-cyan-300">大模型</strong>理解为一个经过海量信息训练的、能力强大的 AI。
+            <h4 className="text-lg font-semibold text-green-700 dark:text-green-300 mb-4">1. 认识不同类型的 AI 大模型</h4>
+            <p className="text-slate-700 dark:text-slate-300 text-sm mb-4">
+              你可以把<strong className="text-blue-700 dark:text-cyan-300">大模型</strong>理解为一个经过海量信息训练的、能力强大的 AI。
               但它们和人一样，也有不同的分工和特长。
             </p>
 
             <div className="space-y-4">
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-2">大语言模型 (LLM - Large Language Model)</h4>
-                <p className="text-slate-300 text-sm mb-2">
-                  <strong>核心能力：</strong> 这是一个专注于处理和生成<strong className="text-cyan-300">文本</strong>的 AI，精通语言的理解、总结、推理和创作。
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/50">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-2">大语言模型 (LLM - Large Language Model)</h4>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">
+                  <strong>核心能力：</strong> 这是一个专注于处理和生成<strong className="text-blue-700 dark:text-cyan-300">文本</strong>的 AI，精通语言的理解、总结、推理和创作。
                 </p>
-                <p className="text-slate-300 text-sm mb-2">
-                  <strong>典型代表：</strong> <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">DeepSeek</code>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">
+                  <strong>典型代表：</strong> <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">DeepSeek</code>
                 </p>
-                <p className="text-slate-300 text-sm">
+                <p className="text-slate-700 dark:text-slate-300 text-sm">
                   <strong>与我们项目的关系：</strong> 当我们对表情包只有一个模糊想法时，可以利用 LLM 帮我们构思，生成详细的描述文字，
-                  也就是我们后面要讲的<strong className="text-cyan-300">提示词</strong>。但需要注意，纯粹的 LLM <strong className="text-red-300">看不懂</strong>图片。
+                  也就是我们后面要讲的<strong className="text-blue-700 dark:text-cyan-300">提示词</strong>。但需要注意，纯粹的 LLM <strong className="text-red-600 dark:text-red-300">看不懂</strong>图片。
                   如Deepseek，官网针对图片是集成了工具仅做OCR文字识别，AI不会主动去理解你的画面元素。
                 </p>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-2">多模态大模型 (MLLM - Multimodal Large Models)</h4>
-                <p className="text-slate-300 text-sm mb-2">
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/50">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-2">多模态大模型 (MLLM - Multimodal Large Models)</h4>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">
                   <strong>核心能力：</strong> 这是一个能同时处理多种信息类型（如文字、图片、声音）的 AI。
                 </p>
-                <p className="text-slate-300 text-sm mb-2">
-                  <strong>典型代表：</strong> <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">豆包</code>、
-                  <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">Kimi</code>、
-                  <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">Google Gemini</code>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">
+                  <strong>典型代表：</strong> <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">豆包</code>、
+                  <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">Kimi</code>、
+                  <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">Google Gemini</code>
                 </p>
-                <p className="text-slate-300 text-sm">
+                <p className="text-slate-700 dark:text-slate-300 text-sm">
                   <strong>与我们项目的关系：</strong> 这是我们项目的核心工具。它可以实现图片理解、图生文等更复杂的任务。
                 </p>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-2">图像生成模型</h4>
-                <p className="text-slate-300 text-sm mb-2">
-                  <strong>核心能力：</strong> 这是一个专门用于根据文字描述（Prompts）来<strong className="text-cyan-300">创作图像</strong>的 AI。
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/50">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-2">图像生成模型</h4>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">
+                  <strong>核心能力：</strong> 这是一个专门用于根据文字描述（Prompts）来<strong className="text-blue-700 dark:text-cyan-300">创作图像</strong>的 AI。
                 </p>
-                <p className="text-slate-300 text-sm mb-2">
-                  <strong>典型代表：</strong> <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">Midjourney</code>、
-                  <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">Stable Diffusion</code>、
-                  <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">DALL·E 3</code>，
-                  以及豆包内置的 <code className="bg-slate-700 px-1 py-0.5 rounded text-cyan-300">doubao-seedream-3.0</code>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-2">
+                  <strong>典型代表：</strong> <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">Midjourney</code>、
+                  <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">Stable Diffusion</code>、
+                  <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">DALL·E 3</code>，
+                  以及豆包内置的 <code className="bg-slate-200 dark:bg-slate-700 px-1 py-0.5 rounded text-blue-700 dark:text-cyan-300">doubao-seedream-3.0</code>
                 </p>
-                <p className="text-slate-300 text-sm">
+                <p className="text-slate-700 dark:text-slate-300 text-sm">
                   <strong>与我们项目的关系：</strong> 当我们准备好完美的提示词后，就由这些图像模型来具体创作出我们想要的表情包图片。
                   当然有些顶尖的模型会与一个强大的语言模型协同工作，以便更精准地理解你的创作意图。
                 </p>
@@ -195,59 +195,59 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
       icon: Target,
       content: (
         <div className="space-y-6">
-          <div className="bg-purple-900/30 border border-purple-700/50 rounded-lg p-6">
+          <div className="bg-purple-50/80 dark:bg-purple-900/30 border border-purple-200/60 dark:border-purple-700/50 rounded-lg p-6">
             <div className="flex items-center space-x-2 mb-4">
-              <Target className="w-5 h-5 text-purple-400" />
-              <h3 className="text-lg font-semibold text-purple-300">掌握与 AI 沟通的艺术：Prompts (提示词)</h3>
+              <Target className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+              <h3 className="text-lg font-semibold text-purple-800 dark:text-purple-300">掌握与 AI 沟通的艺术：Prompts (提示词)</h3>
             </div>
 
-            <p className="text-slate-300 leading-relaxed mb-4">
+            <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
               提示词就是你给 AI 下达的指令。指令的质量，直接决定了 AI 成品的质量。
             </p>
 
             <div className="space-y-4">
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-3">关键心法一：跟 AI 说<strong className="text-cyan-300">人话</strong>，而不是<strong className="text-red-300">老板话</strong></h4>
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/50">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-3">关键心法一：跟 AI 说<strong className="text-blue-600 dark:text-cyan-300">人话</strong>，而不是<strong className="text-red-600 dark:text-red-300">老板话</strong></h4>
                 <div className="space-y-3">
-                  <div className="bg-red-900/20 border border-red-700/30 rounded p-3">
-                    <p className="text-red-300 text-sm font-medium mb-1">❌ 错误示范：</p>
-                    <p className="text-slate-300 text-sm">给我画个猫的表情包，要好玩的。</p>
+                  <div className="bg-red-50/80 dark:bg-red-900/20 border border-red-200/60 dark:border-red-700/30 rounded p-3">
+                    <p className="text-red-700 dark:text-red-300 text-sm font-medium mb-1">❌ 错误示范：</p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">给我画个猫的表情包，要好玩的。</p>
                   </div>
-                  <div className="bg-green-900/20 border border-green-700/30 rounded p-3">
-                    <p className="text-green-300 text-sm font-medium mb-1">✅ 正确示范：</p>
-                    <p className="text-slate-300 text-sm">
-                      请帮我画一个微信表情包。<strong className="text-cyan-300">主体</strong>是一只可爱的英短蓝猫，
-                      <strong className="text-cyan-300">特征</strong>是胖乎乎的圆脸和大眼睛。
-                      <strong className="text-cyan-300">动作</strong>是它正在双手点赞，表情得意。
-                      <strong className="text-cyan-300">画风</strong>是简洁的卡通风格，线条清晰，适合做成表情包。
-                      <strong className="text-cyan-300">构图</strong>是主体居中，背景透明。
+                  <div className="bg-green-50/80 dark:bg-green-900/20 border border-green-200/60 dark:border-green-700/30 rounded p-3">
+                    <p className="text-green-700 dark:text-green-300 text-sm font-medium mb-1">✅ 正确示范：</p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
+                      请帮我画一个微信表情包。<strong className="text-blue-700 dark:text-cyan-300">主体</strong>是一只可爱的英短蓝猫，
+                      <strong className="text-blue-700 dark:text-cyan-300">特征</strong>是胖乎乎的圆脸和大眼睛。
+                      <strong className="text-blue-700 dark:text-cyan-300">动作</strong>是它正在双手点赞，表情得意。
+                      <strong className="text-blue-700 dark:text-cyan-300">画风</strong>是简洁的卡通风格，线条清晰，适合做成表情包。
+                      <strong className="text-blue-700 dark:text-cyan-300">构图</strong>是主体居中，背景透明。
                     </p>
                   </div>
-                  <div className="bg-blue-900/20 border border-blue-700/30 rounded p-3">
-                    <p className="text-blue-300 text-sm font-medium mb-1">💡 核心：</p>
-                    <p className="text-slate-300 text-sm">
+                  <div className="bg-blue-50/80 dark:bg-blue-900/20 border border-blue-200/60 dark:border-blue-700/30 rounded p-3">
+                    <p className="text-blue-700 dark:text-blue-300 text-sm font-medium mb-1">💡 核心：</p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
                       把 AI 当成一个非常有才华但没有主见的实习生，你需要把你的需求描述得
-                      <strong className="text-cyan-300">越具体、越清晰越好</strong>。
+                      <strong className="text-blue-700 dark:text-cyan-300">越具体、越清晰越好</strong>。
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-3">关键心法二：引导 AI 一步一步思考</h4>
-                <p className="text-slate-300 text-sm mb-4">
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/50">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-3">关键心法二：引导 AI 一步一步思考</h4>
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-4">
                   对于复杂的任务，不要指望一步到位。优秀的提示词不仅是提出要求，更是设计一个"思维框架"，
                   通过设定角色、流程、约束条件和输出格式，引导 AI 在一个可控的路径上思考，
-                  从而产出高质量、高稳定性的结果。这也是<strong className="text-cyan-300">提示词工程 (Prompt Engineering)</strong> 的核心思想。
+                  从而产出高质量、高稳定性的结果。这也是<strong className="text-blue-700 dark:text-cyan-300">提示词工程 (Prompt Engineering)</strong> 的核心思想。
                 </p>
 
-                <div className="bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-pink-900/30 border border-indigo-500/30 rounded-2xl p-6 shadow-xl shadow-indigo-500/10">
+                <div className="bg-gradient-to-br from-indigo-50/80 via-purple-50/80 to-pink-50/80 dark:from-indigo-900/30 dark:via-purple-900/30 dark:to-pink-900/30 border border-indigo-200/60 dark:border-indigo-500/30 rounded-2xl p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg">
+                      <div className="p-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-sm">
                         <span className="text-white text-sm">🤖</span>
                       </div>
-                      <h5 className="font-bold text-indigo-200 text-base">完整提示词模板：表情包助手</h5>
+                      <h5 className="font-bold text-indigo-800 dark:text-indigo-200 text-base">完整提示词模板：表情包助手</h5>
                     </div>
                     <button
                       onClick={() => {
@@ -271,8 +271,8 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                     </button>
                   </div>
 
-                  <div className="bg-slate-900/70 rounded-xl p-4 max-h-64 overflow-y-auto border border-slate-700/50">
-                    <pre id="complete-prompt-text" className="text-slate-300 text-xs font-mono whitespace-pre-wrap leading-relaxed">
+                  <div className="bg-slate-100/80 dark:bg-slate-900/70 rounded-xl p-4 max-h-64 overflow-y-auto border border-slate-300/60 dark:border-slate-700/50">
+                    <pre id="complete-prompt-text" className="text-slate-700 dark:text-slate-300 text-xs font-mono whitespace-pre-wrap leading-relaxed">
 {`提示词：表情包助手
 你是一个专业的"表情包制作需求引导与生成助手"。你的核心任务是快速理解用户的基本需求，然后主动为用户设计一套完整的表情包初步方案（包括角色形象、每个表情的画面描述及建议的单段简体中文配文、宣传素材等），并引导用户对这个方案进行"批阅"和反馈，特别是针对每个表情确认"是否有配文"以及（如有）"配文内容是否满意"，并严格遵守微信平台关于宣传素材（尤其是横幅无文字）的规范。最终，根据用户的完全确认结果，生成一份可以直接交付给设计师或AI绘画工具（如Lovart）的、详细且规范的表情包制作需求文档。
 
