@@ -125,9 +125,9 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
               </div>
             </div>
 
-            <h4 className="text-lg font-semibold text-green-300 mb-4 mt-6">2. 认识更强大的 AI 工具：AI Agents (智能体)</h4>
-            <p className="text-slate-300 text-sm mb-4">
-              如果说大模型是 AI 的"大脑"，那智能体 (Agent) 就是一个更完整的系统，它能<strong className="text-cyan-300">调用工具、自主完成一系列任务</strong>。
+            <h4 className="text-lg font-semibold text-green-700 dark:text-green-300 mb-4 mt-6">2. 认识更强大的 AI 工具：AI Agents (智能体)</h4>
+            <p className="text-slate-700 dark:text-slate-300 text-sm mb-4">
+              如果说大模型是 AI 的"大脑"，那智能体 (Agent) 就是一个更完整的系统，它能<strong className="text-cyan-600 dark:text-cyan-300">调用工具、自主完成一系列任务</strong>。
             </p>
 
             <div className="space-y-3">
@@ -272,7 +272,7 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   </div>
 
                   <div className="bg-slate-100/80 dark:bg-slate-900/70 rounded-xl p-4 max-h-64 overflow-y-auto border border-slate-300/60 dark:border-slate-700/50">
-                    <pre id="complete-prompt-text" className="text-slate-700 dark:text-slate-300 text-xs font-mono whitespace-pre-wrap leading-relaxed">
+                    <pre id="complete-prompt-text" className="text-slate-800 dark:text-slate-300 text-xs font-mono whitespace-pre-wrap leading-relaxed">
 {`提示词：表情包助手
 你是一个专业的"表情包制作需求引导与生成助手"。你的核心任务是快速理解用户的基本需求，然后主动为用户设计一套完整的表情包初步方案（包括角色形象、每个表情的画面描述及建议的单段简体中文配文、宣传素材等），并引导用户对这个方案进行"批阅"和反馈，特别是针对每个表情确认"是否有配文"以及（如有）"配文内容是否满意"，并严格遵守微信平台关于宣传素材（尤其是横幅无文字）的规范。最终，根据用户的完全确认结果，生成一份可以直接交付给设计师或AI绘画工具（如Lovart）的、详细且规范的表情包制作需求文档。
 
@@ -420,27 +420,27 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
       icon: Zap,
       content: (
         <div className="space-y-6">
-          <div className="bg-cyan-900/30 border border-cyan-700/50 rounded-lg p-6">
+          <div className="bg-cyan-50 dark:bg-cyan-900/30 border border-cyan-200 dark:border-cyan-700/50 rounded-lg p-6">
             <div className="flex items-center space-x-2 mb-4">
-              <Zap className="w-5 h-5 text-cyan-400" />
-              <h3 className="text-lg font-semibold text-cyan-300">从零到一打造你的专属 AI 表情包 🎯</h3>
+              <Zap className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
+              <h3 className="text-lg font-semibold text-cyan-800 dark:text-cyan-300">从零到一打造你的专属 AI 表情包 🎯</h3>
             </div>
 
-            <div className="bg-blue-900/20 border border-blue-700/30 rounded-lg p-4 mb-6">
-              <h4 className="font-semibold text-blue-300 mb-2">🎯 我们的目标</h4>
-              <p className="text-slate-300 text-sm">
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700/30 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">🎯 我们的目标</h4>
+              <p className="text-slate-700 dark:text-slate-300 text-sm">
                 通过这个实战项目，你将学会如何从一个模糊的想法开始，利用 AI 工具制作出一套完整的微信表情包。
                 整个过程大约需要 30-60 分钟。
               </p>
             </div>
 
             <div className="space-y-4">
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-3 flex items-center">
+              <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-3 flex items-center">
                   <span className="bg-cyan-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">1</span>
                   构思与主角形象确立 💡
                 </h4>
-                <p className="text-slate-300 text-sm mb-3">
+                <p className="text-slate-600 dark:text-slate-300 text-sm mb-3">
                   首先，我们需要确定表情包的主角和基本风格。这一步很关键，因为它决定了整套表情包的统一性。
                 </p>
 
@@ -452,28 +452,32 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                            className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">豆包</a> (免费，支持图像生成)
                     </p>
                     <p className="text-slate-700 dark:text-slate-300 text-sm">
+                      • <a href="https://www.xingliu.art?inviteCode=eZ4PhFL" target="_blank" rel="noopener noreferrer"
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">星流</a> (专业绘画工具)
+                    </p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
                       • <a href="https://lovart.ai/" target="_blank" rel="noopener noreferrer"
-                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">星流 Lovart</a> (专业绘画工具)
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">Lovart</a> (专业绘画工具)
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <h6 className="font-semibold text-white text-sm">具体步骤：</h6>
-                  <ul className="text-slate-300 text-sm space-y-1 ml-4">
-                    <li>• <strong className="text-cyan-300">确定主角</strong>：你的表情包主角是谁？（动物、人物、卡通形象等）</li>
-                    <li>• <strong className="text-cyan-300">样例先行</strong>：让 AI 生成一张"定妆照"，确定基本形象</li>
-                    <li>• <strong className="text-cyan-300">风格确定</strong>：通过调整得到满意的主体形象和画风</li>
+                  <h6 className="font-semibold text-slate-800 dark:text-white text-sm">具体步骤：</h6>
+                  <ul className="text-slate-600 dark:text-slate-300 text-sm space-y-1 ml-4">
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">确定主角</strong>：你的表情包主角是谁？（动物、人物、卡通形象等）</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">样例先行</strong>：让 AI 生成一张"定妆照"，确定基本形象</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">风格确定</strong>：通过调整得到满意的主体形象和画风</li>
                   </ul>
                 </div>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-3 flex items-center">
+              <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-3 flex items-center">
                   <span className="bg-cyan-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">2</span>
                   风格与内容细化 📝
                 </h4>
-                <p className="text-slate-300 text-sm mb-3">
+                <p className="text-slate-600 dark:text-slate-300 text-sm mb-3">
                   确定了主角形象后，我们需要规划整套表情包的内容和风格细节。
                 </p>
 
@@ -492,12 +496,12 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                 </div>
 
                 <div className="space-y-2">
-                  <h6 className="font-semibold text-white text-sm">具体步骤：</h6>
-                  <ul className="text-slate-300 text-sm space-y-1 ml-4">
-                    <li>• <strong className="text-cyan-300">锁定主体特征</strong>：记录主角的关键视觉特征</li>
-                    <li>• <strong className="text-cyan-300">确定表情包主题</strong>：日常、搞笑、工作、恋爱等</li>
-                    <li>• <strong className="text-cyan-300">搜集表情内容清单</strong>：列出8-24个具体表情和动作</li>
-                    <li>• <strong className="text-cyan-300">最终需求确认</strong>：整理成完整的创作需求文档</li>
+                  <h6 className="font-semibold text-slate-800 dark:text-white text-sm">具体步骤：</h6>
+                  <ul className="text-slate-600 dark:text-slate-300 text-sm space-y-1 ml-4">
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">锁定主体特征</strong>：记录主角的关键视觉特征</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">确定表情包主题</strong>：日常、搞笑、工作、恋爱等</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">搜集表情内容清单</strong>：列出8-24个具体表情和动作</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">最终需求确认</strong>：整理成完整的创作需求文档</li>
                   </ul>
                 </div>
 
@@ -514,12 +518,12 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                 </div>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-3 flex items-center">
+              <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-3 flex items-center">
                   <span className="bg-cyan-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">3</span>
                   批量生成与处理 🎨
                 </h4>
-                <p className="text-slate-300 text-sm mb-3">
+                <p className="text-slate-600 dark:text-slate-300 text-sm mb-3">
                   现在开始批量生成表情包图片，并进行后期处理。
                 </p>
 
@@ -532,9 +536,14 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                          className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline ml-1">访问豆包 →</a>
                     </p>
                     <p className="text-slate-700 dark:text-slate-300 text-sm">
-                      • <strong className="text-blue-700 dark:text-cyan-300">星流 Lovart (专业)</strong>：
-                      <a href="https://lovart.ai/" target="_blank" rel="noopener noreferrer"
+                      • <strong className="text-blue-700 dark:text-cyan-300">星流 (专业)</strong>：
+                      <a href="https://www.xingliu.art?inviteCode=eZ4PhFL" target="_blank" rel="noopener noreferrer"
                          className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline ml-1">访问星流 →</a>
+                    </p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
+                      • <strong className="text-blue-700 dark:text-cyan-300">Lovart (专业)</strong>：
+                      <a href="https://lovart.ai/" target="_blank" rel="noopener noreferrer"
+                         className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline ml-1">访问 Lovart →</a>
                     </p>
                     <p className="text-slate-700 dark:text-slate-300 text-sm">
                       • <strong className="text-blue-700 dark:text-cyan-300">Midjourney (高质量)</strong>：
@@ -545,12 +554,12 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                 </div>
 
                 <div className="space-y-2">
-                  <h6 className="font-semibold text-white text-sm">具体步骤：</h6>
-                  <ul className="text-slate-300 text-sm space-y-1 ml-4">
-                    <li>• <strong className="text-cyan-300">批量生成</strong>：使用优化后的提示词逐个生成图片</li>
-                    <li>• <strong className="text-cyan-300">水印处理</strong>：去除或处理生成工具的水印</li>
-                    <li>• <strong className="text-cyan-300">尺寸调整</strong>：统一调整为240×240像素</li>
-                    <li>• <strong className="text-cyan-300">格式优化</strong>：确保文件大小小于500KB</li>
+                  <h6 className="font-semibold text-slate-800 dark:text-white text-sm">具体步骤：</h6>
+                  <ul className="text-slate-600 dark:text-slate-300 text-sm space-y-1 ml-4">
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">批量生成</strong>：使用优化后的提示词逐个生成图片</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">水印处理</strong>：去除或处理生成工具的水印</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">尺寸调整</strong>：统一调整为240×240像素</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">格式优化</strong>：确保文件大小小于500KB</li>
                   </ul>
                 </div>
 
@@ -576,12 +585,12 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                 </div>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-3 flex items-center">
+              <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-3 flex items-center">
                   <span className="bg-cyan-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">4</span>
                   发布上线 🚀
                 </h4>
-                <p className="text-slate-300 text-sm mb-3">
+                <p className="text-slate-600 dark:text-slate-300 text-sm mb-3">
                   最后一步，将制作好的表情包发布到微信表情开放平台。
                 </p>
 
@@ -594,12 +603,12 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                 </div>
 
                 <div className="space-y-2">
-                  <h6 className="font-semibold text-white text-sm">具体步骤：</h6>
-                  <ul className="text-slate-300 text-sm space-y-1 ml-4">
-                    <li>• <strong className="text-cyan-300">注册登录</strong>：使用微信扫码登录表情开放平台</li>
-                    <li>• <strong className="text-cyan-300">创建表情包</strong>：填写表情包名称、简介等信息</li>
-                    <li>• <strong className="text-cyan-300">上传图片</strong>：按要求上传处理好的表情图片</li>
-                    <li>• <strong className="text-cyan-300">提交审核</strong>：等待微信官方审核通过</li>
+                  <h6 className="font-semibold text-slate-800 dark:text-white text-sm">具体步骤：</h6>
+                  <ul className="text-slate-600 dark:text-slate-300 text-sm space-y-1 ml-4">
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">注册登录</strong>：使用微信扫码登录表情开放平台</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">创建表情包</strong>：填写表情包名称、简介等信息</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">上传图片</strong>：按要求上传处理好的表情图片</li>
+                    <li>• <strong className="text-cyan-600 dark:text-cyan-300">提交审核</strong>：等待微信官方审核通过</li>
                   </ul>
                 </div>
 
@@ -632,15 +641,15 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
       icon: CheckCircle,
       content: (
         <div className="space-y-6">
-          <div className="bg-orange-900/30 border border-orange-700/50 rounded-lg p-6">
+          <div className="bg-orange-50 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-700/50 rounded-lg p-6">
             <div className="flex items-center space-x-2 mb-4">
-              <AlertCircle className="w-5 h-5 text-orange-400" />
-              <h3 className="text-lg font-semibold text-orange-300">微信表情包制作规范 📋</h3>
+              <AlertCircle className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+              <h3 className="text-lg font-semibold text-orange-800 dark:text-orange-300">微信表情包制作规范 📋</h3>
             </div>
 
-            <div className="bg-blue-900/20 border border-blue-700/30 rounded-lg p-4 mb-6">
-              <h4 className="font-semibold text-blue-300 mb-2">📌 重要提醒</h4>
-              <p className="text-slate-300 text-sm">
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700/30 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">📌 重要提醒</h4>
+              <p className="text-slate-700 dark:text-slate-300 text-sm">
                 严格遵守以下规范是表情包审核通过的关键。建议在制作前仔细阅读，避免因规格问题被拒。
               </p>
             </div>
@@ -648,30 +657,30 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-slate-700">
-                    <th className="text-left py-2 text-slate-300">素材名称</th>
-                    <th className="text-left py-2 text-slate-300">数量</th>
-                    <th className="text-left py-2 text-slate-300">格式</th>
-                    <th className="text-left py-2 text-slate-300">尺寸</th>
-                    <th className="text-left py-2 text-slate-300">大小限制</th>
+                  <tr className="border-b border-slate-300 dark:border-slate-700">
+                    <th className="text-left py-2 text-slate-700 dark:text-slate-300">素材名称</th>
+                    <th className="text-left py-2 text-slate-700 dark:text-slate-300">数量</th>
+                    <th className="text-left py-2 text-slate-700 dark:text-slate-300">格式</th>
+                    <th className="text-left py-2 text-slate-700 dark:text-slate-300">尺寸</th>
+                    <th className="text-left py-2 text-slate-700 dark:text-slate-300">大小限制</th>
                   </tr>
                 </thead>
-                <tbody className="text-slate-300">
-                  <tr className="border-b border-slate-800">
+                <tbody className="text-slate-600 dark:text-slate-300">
+                  <tr className="border-b border-slate-200 dark:border-slate-800">
                     <td className="py-2">表情图</td>
                     <td className="py-2">8～24张</td>
                     <td className="py-2">GIF/PNG/JPG</td>
                     <td className="py-2">240×240</td>
                     <td className="py-2">≤500KB</td>
                   </tr>
-                  <tr className="border-b border-slate-800">
+                  <tr className="border-b border-slate-200 dark:border-slate-800">
                     <td className="py-2">详情页横幅</td>
                     <td className="py-2">1张</td>
                     <td className="py-2">PNG/JPG</td>
                     <td className="py-2">750×400</td>
                     <td className="py-2">≤500KB</td>
                   </tr>
-                  <tr className="border-b border-slate-800">
+                  <tr className="border-b border-slate-200 dark:border-slate-800">
                     <td className="py-2">表情封面图</td>
                     <td className="py-2">1张</td>
                     <td className="py-2">PNG</td>
@@ -690,9 +699,9 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
             </div>
 
             <div className="mt-6 space-y-4">
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-2">重要设计原则</h4>
-                <ul className="text-slate-300 text-sm space-y-1">
+              <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-2">重要设计原则</h4>
+                <ul className="text-slate-600 dark:text-slate-300 text-sm space-y-1">
                   <li>• 所有表情必须为原创或拥有版权</li>
                   <li>• 表情应充分考虑微信聊天场景</li>
                   <li>• 表情应生动有趣，风格统一</li>
@@ -700,9 +709,9 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                 </ul>
               </div>
 
-              <div className="bg-slate-800/50 rounded-lg p-4">
-                <h4 className="font-semibold text-white mb-2">文案填写规范</h4>
-                <ul className="text-slate-300 text-sm space-y-1">
+              <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-800 dark:text-white mb-2">文案填写规范</h4>
+                <ul className="text-slate-600 dark:text-slate-300 text-sm space-y-1">
                   <li>• <strong>表情名称：</strong>≤8个汉字，无标点符号</li>
                   <li>• <strong>表情介绍：</strong>≤80个汉字，展现特点</li>
                   <li>• <strong>版权信息：</strong>≤10个汉字，简短明确</li>

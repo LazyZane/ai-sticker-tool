@@ -612,14 +612,14 @@ export function ImageToolSection() {
             </div>
           </div>
           
-          <hr className="my-6 border-slate-700" />
+          <hr className="my-6 border-slate-300 dark:border-slate-700" />
 
           <div>
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-bold text-white flex items-center"><Scissors className="mr-2" /> 统一裁剪设置</h2>
+              <h2 className="text-xl font-bold text-slate-800 dark:text-white flex items-center"><Scissors className="mr-2" /> 统一裁剪设置</h2>
               <button onClick={() => setCropEnabled(!cropEnabled)} className="flex items-center space-x-2 text-sm">
                 {cropEnabled ? <ToggleRight className="w-10 h-10 text-cyan-400" /> : <ToggleLeft className="w-10 h-10 text-slate-500" />}
-                <span className={cropEnabled ? 'text-white' : 'text-slate-300 dark:text-slate-400'}>{cropEnabled ? '已启用' : '未启用'}</span>
+                <span className={cropEnabled ? 'text-slate-800 dark:text-white' : 'text-slate-600 dark:text-slate-400'}>{cropEnabled ? '已启用' : '未启用'}</span>
               </button>
             </div>
             
@@ -627,7 +627,7 @@ export function ImageToolSection() {
               <div className="grid lg:grid-cols-2 gap-6 animate-fade-in">
                   <div>
                     <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">在第一张图上设置裁剪模板</p>
-                    <div className="bg-slate-900/50 rounded-lg flex justify-center items-center p-2 min-h-[200px]">
+                    <div className="bg-slate-100 dark:bg-slate-900/50 rounded-lg flex justify-center items-center p-2 min-h-[200px]">
                       <canvas
                         ref={canvasRef}
                         width={400}
@@ -642,7 +642,7 @@ export function ImageToolSection() {
                     <p className="text-sm text-slate-600 dark:text-slate-400">比例约束</p>
                     <div className="grid grid-cols-2 gap-2">
                       {ratios.filter(ratio => ratio.id !== 'custom').map((ratio) => (
-                        <button key={ratio.id} onClick={() => applyRatio(ratio.id)} className={`p-2 rounded text-sm transition-all duration-200 ${selectedRatioId === ratio.id ? 'bg-cyan-600 text-white' : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50'}`}>
+                        <button key={ratio.id} onClick={() => applyRatio(ratio.id)} className={`p-2 rounded text-sm transition-all duration-200 ${selectedRatioId === ratio.id ? 'bg-cyan-600 text-white' : 'bg-slate-200 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600/50'}`}>
                           {ratio.displayName}
                         </button>
                       ))}
@@ -658,14 +658,14 @@ export function ImageToolSection() {
                       </button>
 
                       {selectedRatioId === 'custom' && (
-                        <div className="flex items-center space-x-2 p-3 bg-slate-900/50 rounded-lg">
+                        <div className="flex items-center space-x-2 p-3 bg-slate-100 dark:bg-slate-900/50 rounded-lg">
                           <input
                             type="number"
                             min="0.1"
                             step="0.1"
                             value={customRatioWidth}
                             onChange={(e) => setCustomRatioWidth(e.target.value)}
-                            className="w-16 px-2 py-1 bg-slate-700 text-white rounded text-sm"
+                            className="w-16 px-2 py-1 bg-white dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 rounded text-sm"
                             placeholder="3"
                           />
                           <span className="text-slate-600 dark:text-slate-400">:</span>
@@ -675,7 +675,7 @@ export function ImageToolSection() {
                             step="0.1"
                             value={customRatioHeight}
                             onChange={(e) => setCustomRatioHeight(e.target.value)}
-                            className="w-16 px-2 py-1 bg-slate-700 text-white rounded text-sm"
+                            className="w-16 px-2 py-1 bg-white dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 rounded text-sm"
                             placeholder="2"
                           />
                           <button
@@ -696,10 +696,10 @@ export function ImageToolSection() {
             )}
           </div>
 
-          <hr className="my-6 border-slate-700" />
+          <hr className="my-6 border-slate-300 dark:border-slate-700" />
 
           <div>
-            <h2 className="text-xl font-bold text-white flex items-center mb-4"><Settings className="mr-2" /> 格式化与下载</h2>
+            <h2 className="text-xl font-bold text-slate-800 dark:text-white flex items-center mb-4"><Settings className="mr-2" /> 格式化与下载</h2>
             <div className="mb-4">
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">选择输出规格</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -709,7 +709,7 @@ export function ImageToolSection() {
                     onClick={() => setSelectedPresetId(preset.id)}
                     className={`p-3 rounded-lg border text-left text-sm transition-all duration-200 ${
                       selectedPresetId === preset.id
-                        ? 'bg-cyan-600/20 border-cyan-500 text-cyan-300'
+                        ? 'bg-cyan-600/20 border-cyan-500 text-cyan-700 dark:text-cyan-300'
                         : 'bg-slate-100 dark:bg-slate-700/50 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-500'
                     }`}
                   >
@@ -720,10 +720,10 @@ export function ImageToolSection() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-between bg-slate-900/50 p-4 rounded-lg">
-              <div className="text-slate-200 dark:text-slate-300 mb-4 sm:mb-0">
-                <p>将处理 <strong className="text-white">{images.length}</strong> 张图片</p>
-                <p>裁剪模式: <strong className={cropEnabled ? 'text-cyan-400' : 'text-slate-400 dark:text-slate-500'}>{cropEnabled ? '已启用' : '未启用'}</strong></p>
+            <div className="flex flex-col sm:flex-row items-center justify-between bg-slate-100 dark:bg-slate-900/50 p-4 rounded-lg">
+              <div className="text-slate-700 dark:text-slate-300 mb-4 sm:mb-0">
+                <p>将处理 <strong className="text-slate-800 dark:text-white">{images.length}</strong> 张图片</p>
+                <p>裁剪模式: <strong className={cropEnabled ? 'text-cyan-600 dark:text-cyan-400' : 'text-slate-500 dark:text-slate-500'}>{cropEnabled ? '已启用' : '未启用'}</strong></p>
               </div>
               <button onClick={generateAndDownload} disabled={images.length === 0} className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 disabled:from-slate-600 disabled:to-slate-600 disabled:cursor-not-allowed text-white px-8 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
                 <Download className="w-5 h-5" />
