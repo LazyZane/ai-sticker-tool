@@ -485,12 +485,20 @@ export function TutorialSection({ onToolRedirect }: TutorialSectionProps) {
                   <h5 className="font-semibold text-green-700 dark:text-green-300 text-sm mb-2">🔧 推荐工具：</h5>
                   <div className="space-y-1">
                     <p className="text-slate-700 dark:text-slate-300 text-sm">
-                      • <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer"
-                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">DeepSeek</a> (免费，擅长内容规划)
+                      • <a href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer"
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">豆包</a> (免费，擅长内容规划)
+                    </p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
+                      • <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer"
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">Gemini</a> (免费，Google出品)
                     </p>
                     <p className="text-slate-700 dark:text-slate-300 text-sm">
                       • <a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer"
                            className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">Kimi</a> (免费，支持长文本)
+                    </p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm">
+                      • <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer"
+                           className="text-blue-600 dark:text-cyan-400 hover:text-blue-800 dark:hover:text-cyan-300 underline">DeepSeek</a> (免费，擅长内容规划)
                     </p>
                   </div>
                 </div>
